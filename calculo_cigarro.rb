@@ -4,13 +4,18 @@ class CalculoCigarro
 
   def calculo (anos, qtdCigarros, valor)
 
-    
+    valorTotal = (anos * 365) * qtdCigarros * (valor * 20)
+
+    puts "Você fumando #{qtdCigarros} cigarros por dia, durante #{anos} anos."
+    puts "Vai gastar R$ #{valorTotal}"
 
   end
 
 
 
 end
+
+custoCigarro = CalculoCigarro.new
 
 puts " "
 puts "--- CÁLCULO DO CUSTO COM CIGARROS ---"
@@ -20,5 +25,6 @@ anos = gets.chomp.to_i
 puts "Quantos cigarros você fuma por dia: "
 cigarrosDia = gets.chomp.to_i
 puts "Preço da carteira: "
-cigarrosDia = gets.chomp.to_f
-conversor.converter(esc,temp)
+valorCarteira = gets.chomp.to_f
+puts ""
+custoCigarro.calculo(anos, cigarrosDia, valorCarteira)
